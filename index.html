@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Coop · Cooperativas Energéticas · CTH × PASO</title>
+<meta name="description" content="Energy Coop: cooperativas energéticas CTH × PASO. Pipeline asociativo, método neerlandés (Energie Samen) y piloto demostrativo. Mesa técnica, 28 de agosto de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0C498A;--cyan:#B2EEFA;--lgreen:#9DC384;--fgreen:#669348;--sky:#69B5FA;--white:#FFFFFF;}
+@page{size:A4 landscape;margin:0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{font-family:'Open Sans','PT Sans',sans-serif;color:var(--deep);background:var(--cyan);-webkit-print-color-adjust:exact;print-color-adjust:exact;-webkit-font-smoothing:antialiased;}
+.deck-container{display:flex;flex-direction:column;align-items:center;gap:16px;padding:16px 0;}
+.slide{width:297mm;min-height:210mm;height:210mm;max-width:297mm;position:relative;overflow-x:hidden;overflow-y:auto;page-break-after:always;break-after:page;background:var(--white);box-shadow:0 8px 30px rgba(12,73,138,.18);display:flex;flex-direction:column;}
+.slide:last-child{page-break-after:auto;break-after:auto;}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;}
+.brand-topbar{height:3.2mm;width:100%;display:flex;z-index:10;position:relative;flex-shrink:0;}
+.brand-topbar .b-deep{flex:2;background:var(--deep);}
+.brand-topbar .b-sky{flex:1;background:var(--sky);}
+.brand-topbar .b-cyan{flex:1;background:var(--cyan);}
+.brand-topbar .b-lgreen{flex:1;background:var(--lgreen);}
+.brand-topbar .b-fgreen{flex:1;background:var(--fgreen);}
+.slide-inner{position:relative;z-index:2;flex:1;display:grid;grid-template-columns:minmax(0,1fr) 52mm;min-height:0;}
+.content-sheet{background:var(--white);padding:4.5mm 5.5mm 3.5mm 14mm;display:flex;flex-direction:column;justify-content:space-between;min-height:calc(210mm - 3.2mm);gap:2.2mm;}
+.photo-gutter{min-height:100%;}
+.title-block{background:var(--deep);color:var(--white);padding:2.4mm 4.5mm 2.6mm 5mm;}
+.kicker{font-family:'Open Sans',sans-serif;font-size:12.75pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.2mm;display:flex;align-items:center;gap:6px;}
+.kicker::before{content:"";display:inline-block;width:14px;height:3px;background:var(--lgreen);}
+h1.slide-title{font-family:'PT Sans','Open Sans',sans-serif;font-weight:700;font-size:33pt;line-height:1.05;color:var(--white);letter-spacing:-.015em;}
+h1.slide-title span.subtitle-en{display:block;font-family:'Open Sans',sans-serif;font-weight:400;font-size:16.5pt;color:var(--cyan);letter-spacing:0;margin-top:1mm;line-height:1.18;}
+.lede{font-size:15pt;line-height:1.28;color:var(--deep);background:var(--cyan);padding:2.2mm 3.5mm;}
+.slide-footer{display:flex;justify-content:space-between;align-items:center;background:var(--cyan);padding:1.6mm 3.5mm;font-size:11.25pt;color:var(--deep);font-weight:600;gap:3mm;}
+.slide-footer .motto{color:var(--fgreen);font-weight:700;letter-spacing:.04em;white-space:nowrap;}
+.slide-footer .page-num{font-family:'PT Sans',sans-serif;font-weight:700;color:var(--deep);font-size:12.75pt;white-space:nowrap;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2.8mm;align-items:stretch;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.6mm;align-items:stretch;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:2.2mm;align-items:stretch;}
+.grid-2-3{display:grid;grid-template-columns:1.1fr .9fr;gap:2.8mm;}
+.card{background:var(--white);border:1px solid var(--sky);padding:2.4mm 2.8mm;position:relative;}
+.card.highlight-deep{background:var(--cyan);border-top:3.5px solid var(--deep);}
+.card.highlight-green{background:var(--white);border-top:3.5px solid var(--fgreen);}
+.card.highlight-sky{background:var(--cyan);border-top:3.5px solid var(--sky);}
+.card.highlight-cyan{background:var(--cyan);border-left:4px solid var(--deep);}
+.card.highlight-fgreen{background:var(--white);border-top:3.5px solid var(--fgreen);}
+.card h3{font-family:'PT Sans','Open Sans',sans-serif;font-weight:700;font-size:17.25pt;color:var(--deep);margin-bottom:1.2mm;line-height:1.12;}
+.card p{font-size:12.3pt;line-height:1.28;color:var(--deep);margin-bottom:1.4mm;}
+.card p:last-child{margin-bottom:0;}
+.card strong{color:var(--deep);}
+.metric-box{background:var(--cyan);border:1px solid var(--sky);padding:2.2mm 2.4mm;text-align:center;}
+.metric-box.green{background:var(--lgreen);border-color:var(--fgreen);}
+.metric-box.deep{background:var(--cyan);border-color:var(--sky);}
+.metric-num{font-family:'PT Sans','Open Sans',sans-serif;font-weight:700;font-size:30pt;line-height:1;color:var(--deep);margin-bottom:.8mm;}
+.metric-num.green{color:var(--fgreen);}
+.metric-label{font-size:10.8pt;font-weight:700;text-transform:uppercase;color:var(--deep);line-height:1.18;}
+.callout{padding:2mm 2.6mm;font-size:12.3pt;line-height:1.28;}
+.callout.blue{background:var(--cyan);border-left:3.5px solid var(--deep);color:var(--deep);}
+.callout.green{background:var(--lgreen);border-left:3.5px solid var(--fgreen);color:var(--deep);}
+.callout.alert{background:var(--cyan);border-left:3.5px solid #0C498A;color:var(--deep);}
+.styled-table{width:100%;border-collapse:collapse;font-size:11.7pt;margin-top:1.2mm;}
+.styled-table th{background:var(--deep);color:var(--white);font-family:'PT Sans',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:1.8mm 2.4mm;text-align:left;border:1px solid var(--deep);}
+.styled-table td{padding:1.6mm 2.4mm;border-bottom:1px solid var(--sky);border-right:1px solid var(--sky);border-left:1px solid var(--sky);color:var(--deep);line-height:1.28;background:var(--white);}
+.styled-table tr:nth-child(even) td{background:var(--cyan);}
+.tag{display:inline-block;padding:.7mm 2mm;border-radius:999px;font-size:10.2pt;font-weight:800;text-transform:uppercase;letter-spacing:.03em;}
+.tag.deep{background:var(--deep);color:var(--white);}
+.tag.cyan{background:var(--cyan);color:var(--deep);}
+.tag.green{background:var(--lgreen);color:var(--deep);}
+.tag.fgreen{background:var(--fgreen);color:var(--white);}
+.tag.sky{background:var(--sky);color:var(--deep);}
+ul.clean-list{list-style:none;padding-left:0;}
+ul.clean-list li{font-size:12pt;line-height:1.28;color:var(--deep);margin-bottom:1.1mm;position:relative;padding-left:4.2mm;}
+ul.clean-list li::before{content:"■";color:var(--fgreen);font-size:9pt;position:absolute;left:0;top:.4mm;}
+.logo-shield{display:inline-flex;align-items:center;background:var(--deep);padding:1.6mm 3.2mm;}
+.logo-shield img{height:9mm;width:auto;display:block;}
+.slide.cover-slide,.slide.closing-slide{background:var(--deep);color:var(--white);height:210mm;overflow:hidden;}
+.slide.cover-slide .slide-inner,.slide.closing-slide .slide-inner{display:flex;flex-direction:column;justify-content:space-between;grid-template-columns:none;height:210mm;padding:10mm 16mm 10mm 16mm;}
+.cover-panel{background:var(--deep);max-width:198mm;padding:6mm 7mm 6.5mm 7mm;}
+.cover-badge{display:inline-flex;align-items:center;gap:8px;background:var(--deep);border:1px solid var(--cyan);color:var(--cyan);padding:1.6mm 3.5mm;font-size:12.75pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4mm;}
+.cover-title{font-family:'PT Sans','Open Sans',sans-serif;font-weight:700;font-size:48pt;line-height:1.02;color:var(--white);margin-bottom:3.2mm;}
+.cover-title em{font-style:normal;color:var(--cyan);}
+.cover-subtitle{font-family:'Open Sans',sans-serif;font-weight:400;font-size:19.5pt;line-height:1.28;color:var(--white);max-width:184mm;}
+.cover-location{margin-top:3.2mm;font-size:12pt;font-weight:600;letter-spacing:.06em;color:var(--cyan);}
+.cover-meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3.5mm;background:var(--deep);border-top:3px solid var(--cyan);padding:3.8mm 5.5mm;max-width:265mm;}
+.cover-meta-item .meta-label{font-size:10.5pt;text-transform:uppercase;letter-spacing:.12em;color:var(--cyan);margin-bottom:1mm;font-weight:700;}
+.cover-meta-item .meta-val{font-size:12.75pt;color:var(--white);font-weight:600;}
+.slide.closing-slide h1.slide-title{color:var(--white);}
+.slide.closing-slide h1.slide-title span.subtitle-en{color:var(--cyan);}
+.closing-panel{background:var(--deep);padding:5mm 6.5mm;max-width:210mm;}
+.closing-panel .lede{background:transparent;color:var(--white);padding:0;}
+.closing-meta{display:grid;grid-template-columns:1fr 1fr;gap:5mm;background:var(--deep);border-top:3px solid var(--cyan);padding:4.5mm 6mm;max-width:265mm;}
+.slide.closing-slide .slide-footer{background:var(--deep);color:var(--cyan);border-top:1px solid var(--sky);max-width:265mm;}
+.slide.closing-slide .slide-footer .page-num,.slide.closing-slide .slide-footer .motto{color:var(--cyan);}
+@media screen{body{padding:16px 0;}}
+@media print{.slide{overflow:hidden;box-shadow:none;}}
+</style>
+</head>
+<body>
+<div class="deck-container">
+
+  <section class="slide cover-slide">
+    <div class="slide-bg" style="background-image:url('img/01-cover-solar.jpg')"></div>
+    <div class="slide-inner">
+      <div>
+        <div class="logo-shield"><img src="img/cth-logo-white.svg" alt="CleantechHUB"></div>
+      </div>
+      <div class="cover-panel">
+        <div class="cover-badge"><span>CleantechHUB · Alianza Estratégica</span></div>
+        <h1 class="cover-title">
+          Cooperativas Energéticas<br>
+          <em>en Colombia</em>
+        </h1>
+        <p class="cover-subtitle">
+          Estructuración de pipeline asociativo, transferencia metodológica neerlandesa y gobernanza territorial para comunidades energéticas productivas.
+        </p>
+        <div class="cover-location">Holland House, Bogotá</div>
+      </div>
+      <div class="cover-meta-grid">
+        <div class="cover-meta-item">
+          <div class="meta-label">Fecha</div>
+          <div class="meta-val">Viernes, 28 de Agosto 2026</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="meta-label">Sesión</div>
+          <div class="meta-val">Mesa Técnica</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="meta-label">Participantes</div>
+          <div class="meta-val">CTH · PASO · Asesoría Estratégica</div>
+        </div>
+        <div class="cover-meta-item">
+          <div class="meta-label">Enfoque</div>
+          <div class="meta-val">Desarrollo de Piloto Asociativo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/02-rural.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">01 · Contexto y Diagnóstico</div>
+            <h1 class="slide-title">
+              El Desafío de la Transición Energética Territorial
+              <span class="subtitle-en">The Territorial Energy Transition Challenge: Bridging the Gap from Policy to Bankable Assets</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Colombia cuenta con un marco normativo que impulsa las comunidades energéticas, pero el despliegue efectivo en territorio enfrenta un cuello de botella estructural en prefactibilidad y gobernanza asociativa.
+          </p>
+          <div class="grid-3" style="margin-top: 2.4mm;">
+            <div class="card highlight-deep">
+              <h3>1. Brecha de Pre-Inversión</h3>
+              <p><strong>El cuello de botella de fase temprana:</strong> Las iniciativas comunitarias carecen de recursos de capital semilla para estudios de factibilidad, licenciamiento, diseño de micro-redes y estructuración legal antes de la llegada del capital institucional.</p>
+              <div class="callout blue" style="margin-top: 1.8mm;">
+                El capital comercial busca proyectos listos (<em>ready-to-build</em>), dejando desatendida la etapa crítica de originación.
+              </div>
+            </div>
+            <div class="card highlight-green">
+              <h3>2. Gobernanza y Asociatividad</h3>
+              <p><strong>Sostenibilidad más allá del hardware:</strong> La instalación de activos de generación limpia sin un esquema societario y operativo claro deriva en abandono técnico tras agotarse los subsidios iniciales de instalación.</p>
+              <div class="callout green" style="margin-top: 1.8mm;">
+                Se requiere una figura asociativa (cooperativa) donde los usuarios sean copropietarios y gestionen la tarifa y reinversión local.
+              </div>
+            </div>
+            <div class="card highlight-sky">
+              <h3>3. Energía para Usos Productivos</h3>
+              <p><strong>Autosuficiencia y valor local:</strong> La energía comunitaria en zonas rurales y ZNI adquiere viabilidad financiera y social cuando está directamente anclada a cadenas productivas (cadena de frío, transformación de cacao, agroindustria).</p>
+              <div class="callout blue" style="margin-top: 1.8mm;">
+                Sustitución progresiva de diésel costoso por generación renovable con resiliencia climática ante eventos de El Niño.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB · Mesa Técnica de Trabajo</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">02 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/03-nl-wind.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">02 · Referente Internacional</div>
+            <h1 class="slide-title">
+              La Referencia Neerlandesa: Energie Samen
+              <span class="subtitle-en">The Dutch Benchmark: Federation Architecture, De-Risking Instruments, and Citizen Ownership</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Una referencia analógica comprobada en Europa (no una operación directa en Colombia): cómo los Países Bajos construyeron un ecosistema federado donde los ciudadanos son copropietarios de la infraestructura energética.
+          </p>
+          <div class="grid-2-3" style="margin-top: 2mm;">
+            <div>
+              <div class="grid-2" style="margin-bottom: 2.4mm;">
+                <div class="metric-box deep">
+                  <div class="metric-num">438</div>
+                  <div class="metric-label">Cooperativas Miembros Federadas en Energie Samen (Ene 2026)</div>
+                </div>
+                <div class="metric-box green">
+                  <div class="metric-num green">~730</div>
+                  <div class="metric-label">Cooperativas en el Ecosistema Nacional (~139k Ciudadanos)</div>
+                </div>
+              </div>
+              <div class="card highlight-cyan">
+                <h3>Pilares Clave de la Experiencia Neerlandesa</h3>
+                <ul class="clean-list" style="margin-top: 1.4mm;">
+                  <li><strong>Gobernanza Democrática:</strong> Principio ICA de <em>"un miembro, un voto"</em> con estatutos tipo de responsabilidad excluida (U.A.) y profesionalización técnica.</li>
+                  <li><strong>Reconocimiento de Estado:</strong> Carta Ministerial al Parlamento (Kamerbrief Hermans, 29 Sep 2025) afirmando que las comunidades energéticas son <em>indispensables</em> (<em>onmisbaar</em>) en la transición energética.</li>
+                  <li><strong>Gobernanza Europea:</strong> Energie Samen participa en la junta directiva de REScoop.eu (2025–2029).</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="card highlight-green" style="height: 100%;">
+                <h3>La Lección del Ontwikkelfonds (Fondo de Desarrollo)</h3>
+                <p>El aprendizaje más valioso para Colombia radica en la arquitectura financiera de <strong>des-riesgo temprano</strong> (<em>pre-development de-risking</em>):</p>
+                <div class="callout green" style="margin: 1.8mm 0;">
+                  <strong>Mecanismo Contingente:</strong> Financiamiento de pre-desarrollo que cubre estudios de viabilidad, licenciamiento y permisos de fase temprana; el crédito es condicional y se condona si el proyecto resulta inviable.
+                </div>
+                <p style="font-size: 11.4pt; color: var(--deep);">
+                  <strong>Nota de rigor:</strong> Los fondos neerlandeses (Ontwikkelfonds / Realisatiefonds) operan exclusivamente bajo legislación doméstica en los Países Bajos. Lo transferible a Colombia es el <strong>método de estructuración</strong> y el marco de gobernanza, no recursos financieros neerlandeses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB · Fuente de Datos: Strategie Belangenbehartiging Jaargang 2026 (15.01.2026)</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">03 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/04-rural-coop.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">03 · Estructura de Alianza</div>
+            <h1 class="slide-title">
+              CleantechHUB × PASO Colombia: Construcción de Pipeline
+              <span class="subtitle-en">A Pipeline-Builder Partnership: Combining Territorial Anchoring with Climate-Tech Structuring</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Una alianza complementaria orientada a originar, estandarizar y agregar proyectos de comunidades energéticas asociativas, permitiendo la entrada eficiente de capital de desarrollo.
+          </p>
+          <div class="grid-2" style="margin-top: 2.4mm;">
+            <div class="card highlight-deep">
+              <div class="tag deep" style="margin-bottom: 1.4mm;">Estructuración y Metodología</div>
+              <h3>CleantechHUB (CTH)</h3>
+              <p><strong>Aceleradora y plataforma de inteligencia climática:</strong></p>
+              <ul class="clean-list" style="margin: 1.4mm 0;">
+                <li><strong>Especialización Climática:</strong> Ecosistema de innovación, programas de aceleración y soporte metodológico en tecnologías limpias en Colombia desde 2020.</li>
+                <li><strong>Conexión Internacional:</strong> Enlace técnico con el ecosistema neerlandés de innovación, RVO y buenas prácticas europeas.</li>
+                <li><strong>Rol en la Alianza:</strong> Modelación financiera, arquitectura contractual asociativa, diseño técnico de micro-redes y cuantificación de impacto socioambiental.</li>
+              </ul>
+            </div>
+            <div class="card highlight-green">
+              <div class="tag fgreen" style="margin-bottom: 1.4mm;">Anclaje Territorial y Social</div>
+              <h3>PASO Colombia</h3>
+              <p><strong>Paz Sostenible para Colombia (Programa de One Earth Future):</strong></p>
+              <ul class="clean-list" style="margin: 1.4mm 0;">
+                <li><strong>Presencia Territorial Validada:</strong> Red de Escuelas Rurales Alternativas (ERAs) y cooperativas agropecuarias en zonas prioritarias de consolidación.</li>
+                <li><strong>Confianza Comunitaria:</strong> Experiencia demostrada en gobernanza colectiva, resolución de conflictos y asociatividad productiva.</li>
+                <li><strong>Rol en la Alianza:</strong> <strong>Socio territorial y cooperativo.</strong> PASO no actúa como un operador de generación eléctrica comercial ni utility; aporta la base comunitaria.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout blue" style="margin-top: 2.4mm;">
+            <strong>Declaración de Principio:</strong> La alianza no solicita a las instituciones financiar la compra directa de plantas comerciales, sino co-diseñar y acompañar la asistencia técnica para desplegar un <strong>piloto asociativo demostrativo</strong>.
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB × PASO Colombia · Gobernanza y Pipeline</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">04 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/05-landscape.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">04 · Alineación Institucional</div>
+            <h1 class="slide-title">
+              Alineación Estratégica con Pilares de Política Nacional
+              <span class="subtitle-en">Strategic Alignment: Framing Energy Cooperatives within National Policy Priorities</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Las cooperativas energéticas se posicionan como instrumentos técnicos de autosuficiencia, resiliencia económica regional y gobernanza productiva, articulados con las prioridades gubernamentales vigentes.
+          </p>
+          <div class="grid-3" style="margin-top: 2.4mm;">
+            <div class="card highlight-deep">
+              <div class="tag deep" style="margin-bottom: 1.4mm;">DNP / Planeación</div>
+              <h3>Seguridad Energética Territorial</h3>
+              <p><strong>Autosuficiencia y Resiliencia:</strong> Mitigación de vulnerabilidad local ante estrés hídrico y fenómenos de El Niño mediante generación distribuida limpia y almacenamiento en ZNI.</p>
+              <p style="font-size: 11.7pt; color: var(--deep); margin-top: 1.4mm;">
+                <strong>Mensaje clave:</strong> Un piloto asociativo fortalece la autosuficiencia regional sin requerir nuevas partidas presupuestales de subsidio al consumo diésel.
+              </p>
+            </div>
+            <div class="card highlight-green">
+              <div class="tag fgreen" style="margin-bottom: 1.4mm;">Regiones / Desarrollo</div>
+              <h3>Gobierno de las Regiones</h3>
+              <p><strong>Descentralización Productiva:</strong> Creación de capacidades técnicas y retención del valor económico en el propio territorio a través de esquemas asociativos locales.</p>
+              <p style="font-size: 11.7pt; color: var(--deep); margin-top: 1.4mm;">
+                <strong>Mensaje clave:</strong> Empoderamiento comunitario en zonas de transformación productiva prioritarias mediante copropiedad de infraestructura.
+              </p>
+            </div>
+            <div class="card highlight-sky">
+              <div class="tag sky" style="margin-bottom: 1.4mm;">MinAmbiente / ABC</div>
+              <h3>Pilar Comunidades (ABC)</h3>
+              <p><strong>Agua, Biodiversidad y Comunidades:</strong> La energía limpia como habilitador directo de cadenas de bioeconomía, conservación de bosques y valor agregado local.</p>
+              <p style="font-size: 11.7pt; color: var(--deep); margin-top: 1.4mm;">
+                <strong>Mensaje clave:</strong> La "C" del enfoque ambiental se materializa cuando la comunidad captura valor con energía propia para frío y transformación.
+              </p>
+            </div>
+          </div>
+          <div class="callout alert" style="margin-top: 2.4mm;">
+            <strong>Enfoque Técnico y Diplomático:</strong> La propuesta se formula estrictamente como una solución de ingeniería social y bancabilidad de microrredes rurales, manteniendo neutralidad sectorial frente a debates macroenergéticos nacionales.
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB · Análisis Institucional y Regulatorio</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">05 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/06-nl-infra.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">05 · Puertas de Cooperación Neerlandesa</div>
+            <h1 class="slide-title">
+              Ecosistema Neerlandés: Asistencia Técnica y Diálogo
+              <span class="subtitle-en">Dutch Ecosystem Channels: Knowledge Transfer, Innovation Platforms, and Institutional Dialogue</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Canales identificados en los Países Bajos para transferir metodología y acompañamiento técnico. La oferta hacia Colombia es <strong>método y conocimiento experto</strong>, no un cheque presupuestal directo.
+          </p>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Entidad / Mecanismo</th>
+                <th style="width: 35%;">Qué Es y Alcance Real</th>
+                <th style="width: 40%;">Aplicación Concreta al Piloto en Colombia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>RVO — CWF Facility</strong><br><span style="font-size:10.5pt; color:var(--deep);">(Climate, Water and Food 2026–2029)</span></td>
+                <td>Instrumento G2G implementado por RVO donde Colombia es <em>focus country</em> oficial en el nexo agua-energía-alimentos.</td>
+                <td>Canal formal para estructurar diálogo de políticas públicas y misiones de expertos neerlandeses hacia el piloto.</td>
+              </tr>
+              <tr>
+                <td><strong>Energie Samen</strong><br><span style="font-size:10.5pt; color:var(--deep);">(Federación Nacional de Cooperativas)</span></td>
+                <td>Gobernanza asociativa, estándares de membresía, modelos estatutarios y herramientas de capacitación comunitaria.</td>
+                <td>Transferencia de buenas prácticas de federación y diseño de esquemas de des-riesgo de fase temprana.</td>
+              </tr>
+              <tr>
+                <td><strong>Energy Innovation NL</strong><br><span style="font-size:10.5pt; color:var(--deep);">(Urban Energy Innovation)</span></td>
+                <td>Plataforma de innovación que articula gobierno, centros de conocimiento y empresas en energía descentralizada y microrredes.</td>
+                <td>Puerta de conocimiento técnico sobre balance de red local, almacenamiento y modelos asociativos comunitarios.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="callout blue" style="margin-top: 2.4mm;">
+            <strong>Claridad Institucional:</strong> Ninguna de las entidades neerlandesas mantiene un programa de subsidios directos o despliegue comercial activo en Colombia hoy. El valor estratégico radica en su <strong>experiencia acumulada de estructuración</strong>.
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB · Mapeo de Instrumentos Neerlandeses</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">06 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/07-solar-microgrid.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">06 · Propuesta de Implementación</div>
+            <h1 class="slide-title">
+              Arquitectura del Piloto Asociativo Demostrativo
+              <span class="subtitle-en">Demonstration Pilot Architecture: 4-Stage Phased Roadmap for Sustainable Execution</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Enfoque modular y escalable para estructurar un primer piloto asociativo de 12 a 18 meses, focalizado en una comunidad rural organizada con vocación productiva.
+          </p>
+          <div class="grid-4" style="margin-top: 2.4mm;">
+            <div class="card highlight-deep">
+              <div class="tag deep" style="margin-bottom: 1.2mm;">Fase 1 · Meses 1–3</div>
+              <h3>Diagnóstico y Acuerdos</h3>
+              <p><strong>Anclaje y Línea Base:</strong></p>
+              <ul class="clean-list">
+                <li>Selección concertada del nodo territorial (sobre capacidad ERA existente).</li>
+                <li>Censo de demanda energética productiva (frío, molienda, bombeo).</li>
+                <li>Acuerdo de asamblea comunitaria y compromiso asociativo.</li>
+              </ul>
+            </div>
+            <div class="card highlight-sky">
+              <div class="tag sky" style="margin-bottom: 1.2mm;">Fase 2 · Meses 4–6</div>
+              <h3>Diseño y Gobernanza</h3>
+              <p><strong>Ingeniería y Estatutos:</strong></p>
+              <ul class="clean-list">
+                <li>Adopción de estatutos cooperativos tipo (modelo U.A. adaptado).</li>
+                <li>Ingeniería de detalle de la micro-red solar + almacenamiento.</li>
+                <li>Esquema tarifario solidario y fondo de reposición de activos.</li>
+              </ul>
+            </div>
+            <div class="card highlight-green">
+              <div class="tag green" style="margin-bottom: 1.2mm;">Fase 3 · Meses 7–12</div>
+              <h3>Instalación y Puesta en Marcha</h3>
+              <p><strong>Despliegue y Capacitación:</strong></p>
+              <ul class="clean-list">
+                <li>Procura e instalación de equipamiento solar y red de distribución.</li>
+                <li>Formación de gestores técnicos comunitarios locales.</li>
+                <li>Pruebas de carga con equipos productivos agropecuarios.</li>
+              </ul>
+            </div>
+            <div class="card highlight-fgreen">
+              <div class="tag fgreen" style="margin-bottom: 1.2mm;">Fase 4 · Meses 13–18</div>
+              <h3>Operación y Replicabilidad</h3>
+              <p><strong>Monitoreo y Escala:</strong></p>
+              <ul class="clean-list">
+                <li>Operación autónoma por la asamblea de la cooperativa.</li>
+                <li>Medición de métricas de impacto (tCO2e, horas de servicio, ahorro diésel).</li>
+                <li>Sistematización para replicabilidad en nuevas regiones.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout green" style="margin-top: 2.4mm;">
+            <strong>Diferenciador Clave:</strong> El piloto integra desde el día cero el modelo de <strong>sostenibilidad operativa a largo plazo</strong>, asegurando que la comunidad cuente con ingresos por tarifa productiva para mantener y operar la microrred de forma autónoma.
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB × PASO Colombia · Metodología de Implementación</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">07 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/08-agro.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">07 · Diálogo Interinstitucional</div>
+            <h1 class="slide-title">
+              Estrategia de Interlocución Gubernamental
+              <span class="subtitle-en">Inter-Institutional Engagement: Tailored Value Propositions for National Entities</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Propuesta de acercamiento modular de una página por entidad, articulando el piloto a los mandatos específicos de cada cartera sin solicitar cupos presupuestales extraordinarios.
+          </p>
+          <div class="grid-3" style="margin-top: 2.4mm;">
+            <div class="card highlight-deep">
+              <h3>DNP — Planeación Nacional</h3>
+              <p><strong>Propuesta de Valor:</strong></p>
+              <ul class="clean-list">
+                <li>Presentación del piloto como modelo demostrativo de seguridad energética territorial en ZNI.</li>
+                <li>Acompañamiento mediante Asistencia Técnica Neerlandesa especializada (método y transferencia de capacidades).</li>
+                <li>Sistematización de aprendizajes para enriquecer los lineamientos nacionales de comunidades energéticas.</li>
+              </ul>
+            </div>
+            <div class="card highlight-green">
+              <h3>Ministerio de Hacienda</h3>
+              <p><strong>Propuesta de Valor:</strong></p>
+              <ul class="clean-list">
+                <li>Esquema de <strong>apalancamiento financiero</strong> eficiente: capital comunitario + cooperación internacional + blended finance.</li>
+                <li>Sustitución demostrada de subsidios al consumo de combustible fósil por activos productivos limpios de capital amortizable.</li>
+                <li>Cero impacto sobre el cupo fiscal directo de la nación para 2026.</li>
+              </ul>
+            </div>
+            <div class="card highlight-sky">
+              <h3>Ministerio de Ambiente</h3>
+              <p><strong>Propuesta de Valor:</strong></p>
+              <ul class="clean-list">
+                <li>Materialización de la "C" del enfoque ambiental (Agua, Biodiversidad, Comunidades).</li>
+                <li>Habilitación de proyectos de bioeconomía y transformación comunitaria en áreas de conservación ecológica.</li>
+                <li>Medición rigurosa de emisiones evitadas y reducción de presión sobre ecosistemas estratégicos.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout blue" style="margin-top: 2.4mm;">
+            <strong>Instrumento de Presentación:</strong> Se prepara un <em>One-Pager</em> ejecutivo por entidad que sintetiza el encaje técnico, la gobernanza comunitaria y la asistencia técnica internacional requerida.
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB · Hoja de Ruta Institucional</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">08 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide-bg" style="background-image:url('img/09-workshop.jpg')"></div>
+    <div class="brand-topbar"><div class="b-deep"></div><div class="b-sky"></div><div class="b-cyan"></div><div class="b-lgreen"></div><div class="b-fgreen"></div></div>
+    <div class="slide-inner">
+      <div class="content-sheet">
+        <div>
+          <div class="title-block">
+            <div class="kicker">08 · Próximos Pasos</div>
+            <h1 class="slide-title">
+              Plan de Acción Inmediato y Acuerdos de Trabajo
+              <span class="subtitle-en">Immediate Action Plan: Concrete Milestones and Operational Follow-Up</span>
+            </h1>
+          </div>
+          <p class="lede" style="margin-top:2.2mm;">
+            Tres acuerdos concretos de trabajo para avanzar de forma coordinada en las próximas semanas hacia la consolidación del piloto asociativo.
+          </p>
+          <div class="grid-3" style="margin-top: 2.4mm;">
+            <div class="card highlight-deep">
+              <div class="metric-num" style="font-size: 24pt;">Paso 1</div>
+              <h3>Definición de Localidad y Vehículo</h3>
+              <p><strong>Acuerdo CTH × PASO:</strong></p>
+              <ul class="clean-list">
+                <li>Validar conjuntamente el territorio óptimo para el piloto sobre la red de ERAs con mayor densidad productiva.</li>
+                <li>Definir la estructura jurídica local de contratación y operación cooperativa comunitaria.</li>
+              </ul>
+              <div class="callout blue" style="margin-top: 1.4mm; font-size: 11.25pt;">
+                <em>Estado: Pendiente de confirmación territorial técnica.</em>
+              </div>
+            </div>
+            <div class="card highlight-green">
+              <div class="metric-num green" style="font-size: 24pt;">Paso 2</div>
+              <h3>Hoja Técnica para Entidades Nacionales</h3>
+              <p><strong>Alineación Interinstitucional:</strong></p>
+              <ul class="clean-list">
+                <li>Finalizar documento ejecutivo de una página para DNP destacando seguridad energética y asistencia técnica.</li>
+                <li>Alinear contactos técnicos en Hacienda y MinAmbiente para socialización del modelo de apalancamiento.</li>
+              </ul>
+              <div class="callout green" style="margin-top: 1.4mm; font-size: 11.25pt;">
+                <em>Estado: Estructuración lista para revisión HITL.</em>
+              </div>
+            </div>
+            <div class="card highlight-sky">
+              <div class="metric-num" style="font-size: 24pt; color: var(--sky);">Paso 3</div>
+              <h3>Mesa Redonda Técnica en Holland House</h3>
+              <p><strong>Articulación Binacional:</strong></p>
+              <ul class="clean-list">
+                <li>Coordinar espacio de mesa técnica de diálogo con actores del ecosistema y la sección económica.</li>
+                <li>Canalizar solicitud de introducción formal de conocimiento con Energie Samen / RVO CWF.</li>
+              </ul>
+              <div class="callout blue" style="margin-top: 1.4mm; font-size: 11.25pt;">
+                <em>Estado: En estructuración de agenda temática.</em>
+              </div>
+            </div>
+          </div>
+          <div class="card highlight-cyan" style="margin-top: 2.4mm;">
+            <p style="font-size: 12.3pt; color: var(--deep);">
+              <strong>Compromiso Operativo:</strong> CleantechHUB y PASO Colombia garantizan que ningún documento o solicitud institucional se distribuirá sin la previa validación y aprobación formal (HITL) de los directores del programa.
+            </p>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>CleantechHUB × PASO Colombia · Hoja de Ruta Operativa</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">09 / 10</span>
+        </div>
+      </div>
+      <div class="photo-gutter"></div>
+    </div>
+  </section>
+
+  <section class="slide closing-slide">
+    <div class="slide-bg" style="background-image:url('img/10-close-solar.jpg')"></div>
+    <div class="slide-inner">
+      <div>
+        <div class="logo-shield"><img src="img/cth-logo-white.svg" alt="CleantechHUB"></div>
+        <div class="cover-badge" style="margin-top:3mm;"><span>CleantechHUB · Transición Energética Justa</span></div>
+      </div>
+      <div class="closing-panel">
+        <h1 class="slide-title">
+          Construyendo Energía Comunitaria Sostenible
+          <span class="subtitle-en" style="font-size: 19.5pt; margin-top: 2mm;">Building Sustainable Community Energy through Innovation, Trust, and Solid Governance</span>
+        </h1>
+        <p class="lede" style="font-size: 16.5pt; margin-top: 3.2mm;">
+          «La energía comunitaria no es solo instalar paneles solares; es construir la capacidad local asociativa, productiva y financiera para que los territorios sean dueños de su propio futuro limpio.»
+        </p>
+      </div>
+      <div>
+        <div class="closing-meta">
+          <div>
+            <div style="font-size: 11.25pt; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cyan); font-weight: 700; margin-bottom: 1.5mm;">Contacto Institucional</div>
+            <div style="font-size: 14.25pt; font-weight: 700; color: #fff;">CleantechHUB</div>
+            <div style="font-size: 12.75pt; color: var(--white); margin-top: 1mm;">Gideon Blaauw · Director Ejecutivo</div>
+            <div style="font-size: 12pt; color: var(--cyan); margin-top: 0.5mm;">gideon.blaauw@cleantechhub.net</div>
+          </div>
+          <div>
+            <div style="font-size: 11.25pt; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cyan); font-weight: 700; margin-bottom: 1.5mm;">Propósito Central</div>
+            <div style="font-size: 12.75pt; color: var(--white); line-height: 1.35;">
+              Alianza para el escalamiento de modelos asociativos de energía limpia en Colombia con transferencia técnica internacional.
+            </div>
+          </div>
+        </div>
+        <div class="slide-footer">
+          <span>Bogotá D.C. · 28 de Agosto de 2026</span>
+          <span class="motto">Inspira. Actúa. Transforma.</span>
+          <span class="page-num">10 / 10</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var n = new URLSearchParams(location.search).get('s');
+  if (!n) return;
+  document.body.style.padding = '0';
+  document.body.style.background = '#0C498A';
+  var deck = document.querySelector('.deck-container');
+  if (deck) { deck.style.padding = '0'; deck.style.gap = '0'; }
+  document.querySelectorAll('.slide').forEach(function(el, i){
+    el.style.display = ((i+1) === +n) ? 'flex' : 'none';
+  });
+})();
+</script>
+</body>
+</html>
